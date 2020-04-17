@@ -155,6 +155,9 @@ nav > a + a {
   width: 80%;
   border-radius: 7px;
 }
+.artists-container .artist img:hover {
+  opacity: 80%;
+}
 .artists-container .artist a {
   font-family: 'Slabo 27px', serif;
   text-decoration: none;

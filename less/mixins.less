@@ -13,11 +13,11 @@
         font-weight: 700;
     } 
 }
-.buttonStyle(){
+.buttonStyle(@color, @size){
     font-size: 1.6rem;
-    padding: 0 3%;
+    padding: @size;
     font-family: @bodyFont;
-    background-color: white;
+    background-color: @color;
     border: none;
     border-radius: 5px;
     &:hover{
