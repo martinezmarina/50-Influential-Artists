@@ -264,24 +264,32 @@ function removeArtist(array, idNum) {
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
 function get20s(array){
-  const artists20s = []
+  const artists20s = [];
+
   for(i = 0; i < array.length; i++){
-    if(array[i].years >= 1800 && array[i].years <= 1900){
+    const birthYear = parseInt(array[i].years);
+
+    if(birthYear >= 1800 && birthYear <= 1900){
         artists20s.push(array[i]);
     }
   }
+  return artists20s;
 }
-console.log(artists[1].years);
+
 console.log(get20s(artists));
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(array){
+const prolificArtists = [];
+for(i = 0; i < array.length; i++){
+  if(array[i].paintings >= 100){
+    prolificArtists.push(array[i]);
   }
-
+}
+return prolificArtists;
+}
+console.log(lotsOfArt(artists));
 
 /* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -292,20 +300,35 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+const newArtist = [
+  {
+    "id": 21,
+    "name" : "Marina Martinez",
+    "years" : "1991 - present",
+    "genre" : "Web Design",
+    "nationality" : "United States of America",
+    "bio": "Marina Martinez was born June 2nd 1991 in Keiv, Ukraine. Her family immigrated to the United States in 1993 were she went to Western Carolina University in 2009 to study Art"
   }
+]
 
+function addArtist(array){
+  artists.push(array);
+  return artists
+}
+ console.log(addArtist(newArtist));
 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
-function checkArtist(/* Code here */){
-
-    /* Code here */
-
+function checkArtist(nameOfArtist){
+  for(i = 0; i < artists.length; i++){
+    if(artists[i].name === nameOfArtist){
+      return true;
+    }
   }
+}
+
+console.log(checkArtist("Peter Paul Rubens"));
+
 
 
 
