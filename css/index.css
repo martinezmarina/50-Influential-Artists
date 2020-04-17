@@ -226,7 +226,7 @@ nav > a + a {
 }
 @media (max-width:600px) {
   .title-container {
-    width: 100%;
+    width: 100vw;
     margin: 0 0 5% 0;
   }
 }

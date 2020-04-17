@@ -208,11 +208,14 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
+console.log(artists[0]);
+console.log(artists[2].bio);
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-
+artists[8].name = "Vincent Van Gogh";
+console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -222,9 +225,17 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
-  }
+function getArtistByIndex(array, idNum) {
+      for(let i = 0; i < array.length; i++){
+        if(i === idNum){
+          return `The artist at index ${idNum} is ${array[i].name}`;
+        }
+      }
+      
+}
+  
+  console.log(getArtistByIndex(artists, 10));
+
   
   /**
 
@@ -237,20 +248,31 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(array, idNum) {
+    for(i = 0; i < array.length; i++){
+      if(i === idNum){
+       array.splice(i,1);
+       return array;
+      }
+    }
   }
+  console.log(removeArtist(artists, 0));
   
   /**
 
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
-
-    /* Code here */
-
+function get20s(array){
+  const artists20s = []
+  for(i = 0; i < array.length; i++){
+    if(array[i].years >= 1800 && array[i].years <= 1900){
+        artists20s.push(array[i]);
+    }
   }
+}
+console.log(artists[1].years);
+console.log(get20s(artists));
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
