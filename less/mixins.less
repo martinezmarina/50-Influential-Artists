@@ -1,0 +1,26 @@
+.flexin(@direction, @justify, @align){
+    display:flex;
+    flex-direction:@direction;
+    justify-content:@justify;
+    align-items:@align;
+}
+.linkStyle(@family:@headerFont){
+    font-family: @family;
+    text-decoration: none;
+    padding:0 3%;
+    color:black;
+    &:hover{
+        font-weight: 700;
+    } 
+}
+.buttonStyle(@color, @size){
+    font-size: 1.6rem;
+    padding: @size;
+    font-family: @bodyFont;
+    background-color: @color;
+    border: none;
+    border-radius: 5px;
+    &:hover{
+        font-weight: 700;
+    } 
+}

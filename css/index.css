@@ -1,4 +1,254 @@
-/* Font in design files is Raleway */
-
-/* background-image in Design 👇
- url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg'); */
+@font-face {
+  font-family: 'Baloo Bhaina 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Baloo Bhaina 2 Regular'), local('BalooBhaina2-Regular'), url(https://fonts.gstatic.com/s/baloobhaina2/v1/qWczB6yyq4P9Adr3RtoX1q6yShz7.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Slabo 27px';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Slabo 27px'), local('Slabo27px-Regular'), url(https://fonts.gstatic.com/s/slabo27px/v6/mFT0WbgBwKPR_Z4hGN2qsxg.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  font-size: 62.5;
+}
+body {
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-family: 'Slabo 27px', serif;
+}
+h1,
+h2,
+h3 {
+  font-size: 2.5rem;
+  font-family: 'Baloo Bhaina 2', cursive;
+}
+section,
+header,
+footer {
+  padding: 5% 0;
+}
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav a {
+  font-family: 'Baloo Bhaina 2', cursive;
+  text-decoration: none;
+  padding: 0 3%;
+  color: black;
+}
+nav a:hover {
+  font-weight: 700;
+}
+@media (max-width:600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+nav > a + a {
+  border-left: 1px solid #4e4e4e;
+}
+@media (max-width:600px) {
+  nav > a + a {
+    border-left: none;
+    border-top: 1px solid #4e4e4e;
+  }
+}
+.artists-container {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80vw;
+  margin: 0 10vw;
+}
+@media (max-width:600px) {
+  .artists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.artists-container .artist {
+  width: 45%;
+  text-align: center;
+}
+@media (max-width:600px) {
+  .artists-container .artist {
+    width: 80%;
+  }
+}
+.artists-container .artist img {
+  width: 80%;
+  border-radius: 7px;
+}
+.artists-container .artist img:hover {
+  opacity: 80%;
+}
+@media (max-width:600px) {
+  .artists-container .artist img {
+    width: 100%;
+  }
+}
+.artists-container .artist a {
+  font-family: 'Slabo 27px', serif;
+  text-decoration: none;
+  padding: 0 3%;
+  color: black;
+}
+.artists-container .artist a:hover {
+  font-weight: 700;
+}
+@media (max-width:600px) {
+  .artists-container .artist a {
+    padding: 5% 0;
+  }
+}
+.artists-container .artist .bio {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+@media (max-width:600px) {
+  .artists-container .artist .bio {
+    padding: 5% 0;
+  }
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 80vw;
+  margin: 0 10vw 5% 10vw;
+  background-image: url("/assets/home.png");
+  background-position: center;
+}
+@media (max-width:600px) {
+  .title-container {
+    width: 100vw;
+    margin: 0 0 5% 0;
+  }
+}
+.title-container h1 {
+  text-align: center;
+  width: 50vw;
+  color: white;
+  font-size: 4rem;
+}
+.title-container button {
+  font-size: 1.6rem;
+  padding: 0 3%;
+  font-family: 'Slabo 27px', serif;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
+.title-container button:hover {
+  font-weight: 700;
+}
+@media (max-width:600px) {
+  .title-container button {
+    padding: 0 10%;
+  }
+}
