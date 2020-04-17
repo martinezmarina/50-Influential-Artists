@@ -25,10 +25,30 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. How would you describe preprocessing to someone new to CSS?
+
+Preprocessing is like the “middleman” between CSS and you, you would type code in the preprocessing and it would translate that code into CSS for you. It makes writing code in CSS much more efficient and less repetitive. 
+
 2. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+I really like mixins you only write the code down once for something that you are going to use often and use that mixin for many elements that require it. Also having everything nested together makes a lot more sense to me too; meaning everything in the header section is nested together, and so on. 
+
+The part that requires the most foresight is deciding what should or shouldn’t be a mixin. Mixins with parameters are pretty cool for that, because where one button might have a width with a set % in the sidebar it might need a different % in the main body section. All in all I really like using preprocessing.
+
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+A variable is a like setting up a predetermined value, like lets say there is a color scheme you really like for the site. You can put down all the colors in variables and name them; it also adds the convenience of changing a color efficiently, instead of hunting down every time you used that color you can just change or redefine the variable.
+
 4. What is the purpose of using functions in code?
+
+I think of functions as machines, a value is put into a function and a result is given back. For example in LESS there is a darken function, lets say that on hover you would like the button to darken, instead of going through all the colors to pick the right hue of darker color you could just use the darken function; let the computer do the work. 
+In JavaScript you are mainly writing functions, “building these machines”, so that when a value is entered it returns the result you want.
+
+
 5. What is a JSON data?
+
+JavaScript Object Notation: it a way of writing objects with multiple strings of data that can be used in functions, and it keeps all the data in one place rather than having many variables with only one string of data each.
+
 
 You may need to look up an answer but, you are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
