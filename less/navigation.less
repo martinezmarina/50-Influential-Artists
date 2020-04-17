@@ -4,10 +4,17 @@
         a{ 
             .linkStyle();           
         } 
+        @media @mobile{
+            .flexin(column, center, center)
+        }
        
     }
     nav > a + a {
         border-left: 1px solid rgb(78, 78, 78);
+        @media @mobile{
+            border-left: none;
+            border-top:1px solid rgb(78, 78, 78);
+        }
     }
     
    

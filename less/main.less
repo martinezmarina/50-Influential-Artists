@@ -3,22 +3,37 @@
     .flexin(row, space-between, flex-start);
     width:80vw;
     margin:0 10vw;
+    @media @mobile{
+        .flexin(column, center, center)
+    }
     .artist{
         width: 45%;
         text-align: center;
+        @media @mobile{
+            width:80%;
+        }
         img{
             width: 80%;
             border-radius: 7px;
             &:hover{
                 opacity:80%;
             }
+            @media @mobile{
+                width: 100%;
+            }
         }
         a{
             .linkStyle(@bodyFont);
+            @media @mobile{
+                padding: 5% 0;
+            }
         }
         .bio{
             font-size: 1.2rem;
             line-height: 1.2;
+            @media @mobile{
+                padding: 5% 0;
+            }
         }
     }
 }

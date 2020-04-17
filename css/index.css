@@ -135,8 +135,22 @@ nav a {
 nav a:hover {
   font-weight: 700;
 }
+@media (max-width:600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 nav > a + a {
   border-left: 1px solid #4e4e4e;
+}
+@media (max-width:600px) {
+  nav > a + a {
+    border-left: none;
+    border-top: 1px solid #4e4e4e;
+  }
 }
 .artists-container {
   border-top: 1px solid black;
@@ -147,9 +161,22 @@ nav > a + a {
   width: 80vw;
   margin: 0 10vw;
 }
+@media (max-width:600px) {
+  .artists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .artists-container .artist {
   width: 45%;
   text-align: center;
+}
+@media (max-width:600px) {
+  .artists-container .artist {
+    width: 80%;
+  }
 }
 .artists-container .artist img {
   width: 80%;
@@ -157,6 +184,11 @@ nav > a + a {
 }
 .artists-container .artist img:hover {
   opacity: 80%;
+}
+@media (max-width:600px) {
+  .artists-container .artist img {
+    width: 100%;
+  }
 }
 .artists-container .artist a {
   font-family: 'Slabo 27px', serif;
@@ -167,9 +199,19 @@ nav > a + a {
 .artists-container .artist a:hover {
   font-weight: 700;
 }
+@media (max-width:600px) {
+  .artists-container .artist a {
+    padding: 5% 0;
+  }
+}
 .artists-container .artist .bio {
   font-size: 1.2rem;
   line-height: 1.2;
+}
+@media (max-width:600px) {
+  .artists-container .artist .bio {
+    padding: 5% 0;
+  }
 }
 .title-container {
   display: flex;
@@ -181,6 +223,12 @@ nav > a + a {
   margin: 0 10vw 5% 10vw;
   background-image: url("/assets/home.png");
   background-position: center;
+}
+@media (max-width:600px) {
+  .title-container {
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
 }
 .title-container h1 {
   text-align: center;
@@ -198,4 +246,9 @@ nav > a + a {
 }
 .title-container button:hover {
   font-weight: 700;
+}
+@media (max-width:600px) {
+  .title-container button {
+    padding: 0 10%;
+  }
 }
